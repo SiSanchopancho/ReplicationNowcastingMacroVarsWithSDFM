@@ -11,8 +11,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 This repository contains the replication code for the working paper:
 
-**Title:** Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model
-
-**Authors:** Domenic Franjic, Karsten Schweikert  
-**Status:** Working Paper  
-**Available at:** [SSRN](https://dx.doi.org/10.2139/ssrn.4733872)
+Franjic, Domenic and Schweikert, Karsten, *Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model* (February 21, 2024). Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872 
