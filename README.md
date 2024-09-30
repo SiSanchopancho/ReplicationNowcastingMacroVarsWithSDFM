@@ -8,11 +8,11 @@ This repository contains the replication code for the following working paper:
 Franjic, Domenic and Schweikert, Karsten, *Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model* (February 21, 2024). Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872
 
 In short, the code draws data from a dynamic factor model, i.e., a linear Gaussian state-space model, according to
-\begin{align}
-	\mathbf{x}_{t}^* &= \boldymbol{\Lambda}\mathbf{f}_t + \bm{\xi}_t^*\notag\\
-    \bm{\Phi}^P(\mathbb{L})\mathbf{f}_{t} &= \bm{\epsilon}_t\label{eq:dense_DFM}\\
-    \mathbb{E}(\bm{\xi}_t^*{\bm{\xi}_t^*}') &= (\sigma_{n,m})_{n=1,m=1}^{N,N}=:\bm{\Sigma},\notag
-\end{align}
+$$
+\mathbf{x}_{t}^* &= \boldymbol{\Lambda}\mathbf{f}_t + \bm{\xi}_t^*
+\bm{\Phi}^P(\mathbb{L})\mathbf{f}_{t} &= \bm{\epsilon}_t
+\mathbb{E}(\bm{\xi}_t^*{\bm{\xi}_t^*}') &= (\sigma_{n,m})_{n=1,m=1}^{N,N}=:\bm{\Sigma},
+$$
 for $t=1/3,2/3,\dots,T$, where $\bm{\epsilon}_t\sim\mathcal{N}(\mathbf{0}_R,\bm{\Omega})$ represents the state error
 
 ## Features
