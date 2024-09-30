@@ -7,19 +7,13 @@ This repository contains the replication code for the following working paper:
 
 Franjic, Domenic and Schweikert, Karsten, *Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model* (February 21, 2024). Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872
 
-In short, the code draws data from a dynamic factor model, i.e., a linear Gaussian state-space model, according to
-\item For $t=1/3,\dots,T$, we assume that \hilit{$\mathbf{x}_{t}^*$ follows an \textit{approximate DFM}}. %\citep{chamberlain1983arbitrage}}, i.e.,
+In short, the code draws data $\mathbf{x}_t$ from a dynamic factor model, i.e., a linear Gaussian state-space model, according to
 \begin{align}
-\mathbf{x}_{t}^* &= \bm{\Lambda}\mathbf{f}_t + \bm{\xi}_t^*,\notag\\
-\bm{\Phi}^P(\mathbb{L})\mathbf{f}_{t} &= \bm{\epsilon}_t,\label{eq:dense_DFM}\\
-\mathbb{E}(\bm{\xi}_t^*{\bm{\xi}_t^*}') &= (\sigma_{n,m})_{n=1,m=1}^{N,N}=:\bm{\Sigma}.\notag
+	\mathbf{x}_{t}^* &= \boldymbol{\Lambda}\mathbf{f}_t + \bm{\xi}_t^*\notag\\
+    \bm{\Phi}^P(\mathbb{L})\mathbf{f}_{t} &= \bm{\epsilon}_t\label{eq:dense_DFM}\\
+    \mathbb{E}(\bm{\xi}_t^*{\bm{\xi}_t^*}') &= (\sigma_{n,m})_{n=1,m=1}^{N,N}=:\bm{\Sigma},\notag
 \end{align}
-
-\item \hilit{$\bm{\Lambda} := (\lambda_{n,r})_{n=0,r=1}^{N,R}$}, where $0<R\ll N$, is the \hilit{\textit{factor loadings matrix}} and \hilit{$\mathbf{f}_t := (f_{r,t})_{r=1}^R$}  is the \hilit{vector of \textit{latent factors}}.
-
-\item $\bm{\epsilon}_t\sim\mathcal{N}(\mathbf{0}_R,\bm{\Omega})$ represents the state error and \hilit{$\bm{\xi}_t^*\sim\mathcal{N}(\mathbf{0}_N,\bm{\Sigma})$ represents the measurement error}.
-
-\item $\bm{\Phi}^P(\mathbb{L})$ is the matrix-polynomial in the lag operator with $\bm{\Phi}_0 = \mathbf{I}_{R\times R}$ and generic element $\bm{\Phi}_p = (\phi_{r,q,p})_{r=1,q=1}^{R,R}$ for $p=1,\dots,P$.
+for $t=1/3,2/3,\dots,T$, where $\bm{\epsilon}_t\sim\mathcal{N}(\mathbf{0}_R,\bm{\Omega})$ represents the state error
 
 ## Features
 
