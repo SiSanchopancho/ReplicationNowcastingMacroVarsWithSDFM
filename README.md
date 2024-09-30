@@ -1,5 +1,5 @@
 # ReplicationNowcastingMacroVarsWithSDFM
-A revised version of the code used in our study on "Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model"
+A revised version of the code used for the simulation study in "Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model" by Dr. [Karsten Schweikert](https://github.com/karstenschweikert) and I.
 
 ## License
 
