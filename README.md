@@ -79,7 +79,7 @@ If you have any questions or need assistance, please open an issue on the GitHub
 
 ## Contact
 
-**Name**: Domenic Franjic
-**Institution**: University of Hohenheim
-**Department**: Econometrics and Statistics, Core Facility Hohenheim
-**E-Mail**: franjic@uni-hohenheim.de
+-**Name**: Domenic Franjic
+-**Institution**: University of Hohenheim
+-**Department**: Econometrics and Statistics, Core Facility Hohenheim
+-**E-Mail**: franjic@uni-hohenheim.de
