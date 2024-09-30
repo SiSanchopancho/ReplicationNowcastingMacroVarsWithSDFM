@@ -3,6 +3,6 @@ A revised version of the code used in our study on "Nowcasting Macroeconomic Var
 
 ## License
 
-© 2023 Jane Smith
+© 2024 Domenic Franjic
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
