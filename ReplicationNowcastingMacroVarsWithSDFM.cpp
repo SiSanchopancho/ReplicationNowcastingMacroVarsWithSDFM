@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 /*
- * Copyright © 2024 Domenic Franjic
+ * Copyright Â© 2024 Domenic Franjic
  *
  * This file is part of ReplicationNowcastingMacroVarsWithSDFM.
  *
@@ -77,7 +77,7 @@ void displayNotice(const std::string& type) {
         std::cout << '\n' << "15. Disclaimer of Warranty \n"
             << "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. "
             << "EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND / OR OTHER "
-            << "PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED "
+            << "PARTIES PROVIDE THE PROGRAM â€œAS ISâ€ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED "
             << "OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY "
             << "AND FITNESS FOR A PARTICULAR PURPOSE.THE ENTIRE RISK AS TO THE QUALITY AND "
             << "PERFORMANCE OF THE PROGRAM IS WITH YOU.SHOULD THE PROGRAM PROVE DEFECTIVE, YOU "
@@ -111,7 +111,7 @@ const int T = 3 * (100) + 3; // Number of observations in monthly terms
 const int FCH = 3; // Forecasting horizon
 const int T_CV = T - FCH; // Cross-Validation set
 const int H = static_cast<int>(std::ceil(double(T) / 3.)); // Number of CV nowcasts
-const int II = 10; // Number of experiment repetitions
+const int II = 1000; // Number of experiment repetitions
 int R_vec[4] = { 1 , 2 , 3 , 4 }; // Array storing the values of factors ought to be checked
 double beta_vec[4] = { 4.212120 , 1.737370 , 0.994949 , 0.5 }; // Arrray storing the degrees of correlation ought to be checked
 double prob_vec[2] = { 0.0, 0.8 }; // Array storing the degrees of sparsities ought to be checked
