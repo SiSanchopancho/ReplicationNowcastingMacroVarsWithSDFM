@@ -38,13 +38,6 @@
 #include <algorithm>
 #include <cctype>
 #include <ctime>
-#ifdef _WIN32
-#include <io.h>
-#define isatty _isatty
-#define fileno _fileno
-#else
-#include <unistd.h>
-#endif
 
 // Internal includes
 #include "Internals/DataGen.h"
@@ -127,32 +120,28 @@ int main() {
 
     Eigen::initParallel();
 
-    // Detect if stdout is connected to a terminal
-    if (isatty(fileno(stdout))) {
-
-        // Output the notice
-        std::cout << "ReplicationNowcastingMacroVarsWithSDFM Copyright (C) 2024  Domenic Franjic" << std::endl;
-        std::cout << "This program comes with ABSOLUTELY NO WARRANTY; for details type `w'." << std::endl;
-        std::cout << "This is free software, and you are welcome to redistribute it" << std::endl;
-        std::cout << "under certain conditions; type `c' for details." << std::endl;
-        std::string input = toLower(getUserInput("To continue with the program type `continue' or hit enter."));
-        while (true) {
-            if (input == "w") {
-                displayNotice("w");
-                input = "";
-                input = toLower(getUserInput("To continue with the program type `continue' or hit enter. To see the copying conditions type 'c' "));
-            }
-            else if (input == "c") {
-                displayNotice("c");
-                input = "";
-                input = toLower(getUserInput("To continue with the program type `continue' or hit enter. To see the disclaimer of waranty type 'w' "));
-            }
-            else if (input == "" || input == "continue") {
-                break;
-            }
-            else {
-                input = toLower(getUserInput("Invalid input. Please enter 'w', 'c' or 'continue'. "));
-            }
+    // Output the notice
+    std::cout << "ReplicationNowcastingMacroVarsWithSDFM Copyright (C) 2024  Domenic Franjic" << std::endl;
+    std::cout << "This program comes with ABSOLUTELY NO WARRANTY; for details type `w'." << std::endl;
+    std::cout << "This is free software, and you are welcome to redistribute it" << std::endl;
+    std::cout << "under certain conditions; type `c' for details." << std::endl;
+    std::string input = toLower(getUserInput("To continue with the program type `continue' or hit enter."));
+    while (true) {
+        if (input == "w") {
+            displayNotice("w");
+            input = "";
+            input = toLower(getUserInput("To continue with the program type `continue' or hit enter. To see the copying conditions type 'c' "));
+        }
+        else if (input == "c") {
+            displayNotice("c");
+            input = "";
+            input = toLower(getUserInput("To continue with the program type `continue' or hit enter. To see the disclaimer of waranty type 'w' "));
+        }
+        else if (input == "" || input == "continue") {
+            break;
+        }
+        else {
+            input = toLower(getUserInput("Invalid input. Please enter 'w', 'c' or 'continue'. "));
         }
 
         // Clear the shell for visibility and re-print the notice
