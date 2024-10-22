@@ -7,7 +7,7 @@ This repository contains the replication code for the following working paper:
 
 Franjic, Domenic and Schweikert, Karsten, *Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model* (February 21, 2024). Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872
 
-The code simulates data from a dynamic factor model (DFM), explores various parameters such as sparsity levels and factor counts, and evaluates the performance using mean squared nowcasting error (MSNE). For detailed methodology and results, please refer to the [paper](https://ssrn.com/abstract=4733872).
+The code simulates data from a dynamic factor model (DFM) and evaluates the performance using mean squared nowcasting error (MSNE). For detailed methodology and results, please refer to the [paper](https://ssrn.com/abstract=4733872).
 
 ## Features
 
