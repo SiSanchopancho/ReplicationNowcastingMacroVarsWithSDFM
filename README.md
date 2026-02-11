@@ -31,17 +31,17 @@ The code simulates data from a dynamic factor model (DFM) and evaluates the perf
    cd ReplicationNowcastingMacroVarsWithSDFM
 4. The repository is ready to compile. Using MinGW-w64 GCC with reasonable speed optimisation on windows, a potential compiler call could look something like this:
    ```bash
-   g++ -std=c++14 -Wall -O3 -march=native -mfma -fopenmp -DNDEBUG -I "C:\Path\To\Eigen" ReplicationNowcastingMacroVarsWithSDFM.cpp Internals\*.cpp -o ReplicationNowcastingMacroVarsWithSDFM.exe
+   g++ -std=c++14 -Wall -O3 -march=native -mfma -fopenmp -DNDEBUG -I "C:\Path\To\Eigen" SimulationStudyReplication.cpp Internals\*.cpp -o SimulationStudyReplication.exe
    ```
    On Linux, a possible compiler call might be
    ```bash
-   g++ -std=c++14 -Wall -O3 -march=native -mfma -fopenmp -DNDEBUG -I /path/to/eigen3 ReplicationNowcastingMacroVarsWithSDFM.cpp Internals/*.cpp -o ReplicationNowcastingMacroVarsWithSDFM
+   g++ -std=c++14 -Wall -O3 -march=native -mfma -fopenmp -DNDEBUG -I /path/to/eigen3 SimulationStudyReplication.cpp Internals/*.cpp -o SimulationStudyReplication
    ```
    Note that the speed optimisations are highly encouraged due to the computational complexity of the cross-validation scheme.
 
 ## Usage
 
-Most of the model parameters are set at compile time. However, it is possible to interrupt the simulations and restart them at a later time. To re-parameterise the simulation study, it is generally sufficient to change the "hard" parameters at the beginning of ReplicationNowcastingMacroVarsWithSDFM.cpp. Further or more general changes to the model parameterisation require a reformulation of the structure in the data-generating part of ReplicationNowcastingMacroVarsWithSDFM.cpp or at deeper levels.
+Most of the model parameters are set at compile time. However, it is possible to interrupt the simulations and restart them at a later time. To re-parameterise the simulation study, it is generally sufficient to change the "hard" parameters at the beginning of SimulationStudyReplication.cpp. Further or more general changes to the model parameterisation require a reformulation of the structure in the data-generating part of SimulationStudyReplication.cpp or at deeper levels.
 
 ## License
 
