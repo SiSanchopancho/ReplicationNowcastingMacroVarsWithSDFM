@@ -65,14 +65,7 @@ I also utilise the following libraries:
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-**To Contribute:**
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes with descriptive messages.
-4. Push to your fork and submit a pull request.
+As this repo provides the code to replicate the results of our study, it is not possible to contribute.
 
 ## Support
 
