@@ -7,21 +7,23 @@ This repository contains the replication code for the following working paper:
 
 Franjic, Domenic and Schweikert, Karsten, *Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model* (February, 2026). Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872
 
-The code simulates data from a dynamic factor model (DFM) and evaluates the performance using mean squared nowcasting error (MSNE). For detailed methodology and results, please refer to the [paper](https://ssrn.com/abstract=4733872).
+## SimulationStudyReplication.cpp
 
-## Features
+This file, together with the routines in ``./Internals/``, provides the code to replicate the simulation results of our study.
+
+### Features
 
 - **Fast and Parallelised Cross-Validation**: Implements a parallelised random hyper-parameter search for efficient cross-validation.
 - **Flexible Simulation Parameters**: Allows a high degree of customisation of the model parameterisation.
 - **Compatibility**: Works on modern Windows and Linux operating systems.
 - **Open-Source**: Distributed under the GNU General Public License v3.0.
 
-## Prerequisites
+### Prerequisites
 
 - **Eigen** (version 3.4.0 or later): A C++ template library for linear algebra. [Eigen Website](https://eigen.tuxfamily.org/)
 - **OpenMP-compatible C++ Compiler**: Such as GCC (version 5.0 or later) or MSVC (Visual Studio 2019 or later).
 
-## Installation
+### Installation
 
 1. Make sure that a compatible version of Eigen3 (3.4.0 or later) is installed.
 2. Install a OpenMP compatible C++ compiler such as GNU C++ Compiler or MSVC.
@@ -39,9 +41,21 @@ The code simulates data from a dynamic factor model (DFM) and evaluates the perf
    ```
    Note that the speed optimisations are highly encouraged due to the computational complexity of the cross-validation scheme.
 
-## Usage
+### Usage
 
 Most of the model parameters are set at compile time. However, it is possible to interrupt the simulations and restart them at a later time. To re-parameterise the simulation study, it is generally sufficient to change the "hard" parameters at the beginning of SimulationStudyReplication.cpp. Further or more general changes to the model parameterisation require a reformulation of the structure in the data-generating part of SimulationStudyReplication.cpp or at deeper levels.
+
+## EmpiricalStudyReplication.r
+
+This file provides the code to replicate the empirical results of our study (comming soon).
+
+### Prerequisites
+
+- **TwoStepSDFM**: A beta version of my ``R`` package that implements, among other things, the estimation, cross-validation, and nowcasting schemes outlined in our study. [TwoStepSDFM Github Repo](https://eigen.tuxfamily.org/](https://github.com/SiSanchopancho/TwoStepSDFM.git)
+
+### Usage
+
+Using the code is straightforward. Before using it for the first time, the data download block should be un-commented and executed in order to, load, pre-process and restructure the data vintages. After that, the script can be executed without modification.
 
 ## License
 
