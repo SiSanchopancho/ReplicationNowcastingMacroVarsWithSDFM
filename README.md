@@ -5,7 +5,7 @@ A revised version of the code used for the simulation study in "Nowcasting Macro
 
 This repository contains the replication code for the following working paper:
 
-Franjic, Domenic and Schweikert, Karsten, *Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model* (February 21, 2024). Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872
+Franjic, Domenic and Schweikert, Karsten, *Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model* (February, 2026). Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872
 
 The code simulates data from a dynamic factor model (DFM) and evaluates the performance using mean squared nowcasting error (MSNE). For detailed methodology and results, please refer to the [paper](https://ssrn.com/abstract=4733872).
 
@@ -13,7 +13,7 @@ The code simulates data from a dynamic factor model (DFM) and evaluates the perf
 
 - **Fast and Parallelised Cross-Validation**: Implements a parallelised random hyper-parameter search for efficient cross-validation.
 - **Flexible Simulation Parameters**: Allows a high degree of customisation of the model parameterisation.
-- **Compatibility**: Works on modern Windows, Linux, and macOS operating systems.
+- **Compatibility**: Works on modern Windows and Linux operating systems.
 - **Open-Source**: Distributed under the GNU General Public License v3.0.
 
 ## Prerequisites
@@ -33,7 +33,7 @@ The code simulates data from a dynamic factor model (DFM) and evaluates the perf
    ```bash
    g++ -std=c++14 -Wall -O3 -march=native -mfma -fopenmp -DNDEBUG -I "C:\Path\To\Eigen" ReplicationNowcastingMacroVarsWithSDFM.cpp Internals\*.cpp -o ReplicationNowcastingMacroVarsWithSDFM.exe
    ```
-   On Linux or MAC, a possible compiler call might be
+   On Linux, a possible compiler call might be
    ```bash
    g++ -std=c++14 -Wall -O3 -march=native -mfma -fopenmp -DNDEBUG -I /path/to/eigen3 ReplicationNowcastingMacroVarsWithSDFM.cpp Internals/*.cpp -o ReplicationNowcastingMacroVarsWithSDFM
    ```
@@ -41,7 +41,7 @@ The code simulates data from a dynamic factor model (DFM) and evaluates the perf
 
 ## Usage
 
-Most of the model parameters are set at compile time. However, it is possible to pause the simulations and restart them at a later time. To re-parameterise the simulation study, it is generally sufficient to change the "hard" parameters at the beginning of ReplicationNowcastingMacroVarsWithSDFM.cpp. Further or more general changes to the model parameterisation require a reformulation of the structure in the data-generating part of ReplicationNowcastingMacroVarsWithSDFM.cpp or at deeper levels.
+Most of the model parameters are set at compile time. However, it is possible to interrupt the simulations and restart them at a later time. To re-parameterise the simulation study, it is generally sufficient to change the "hard" parameters at the beginning of ReplicationNowcastingMacroVarsWithSDFM.cpp. Further or more general changes to the model parameterisation require a reformulation of the structure in the data-generating part of ReplicationNowcastingMacroVarsWithSDFM.cpp or at deeper levels.
 
 ## License
 
@@ -80,6 +80,7 @@ If you have any questions or need assistance, please open an issue on the GitHub
 ## Contact
 
 - **Name**: Domenic Franjic
+- **E-Mail**: franjic@uni-hohenheim.de
 - **Institution**: University of Hohenheim
 - **Department**: Econometrics and Statistics, Core Facility Hohenheim
 - **E-Mail**: franjic@uni-hohenheim.de
