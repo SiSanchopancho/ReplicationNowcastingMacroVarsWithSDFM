@@ -56,6 +56,7 @@ This project is licensed under the **GNU General Public License v3.0**. See the 
 This work is partially based on the LARS-EN and SPCA algorithms found in:
 
 - Zou, H., Hastie, T., & Tibshirani, R. (2006). *Sparse Principal Component Analysis*. Journal of Computational and Graphical Statistics, 15(2), 265-286.
+- Normal Splines. (2019, February 25). Algorithms for updating the Cholesky factorization. Normal Splines Blog. (https://normalsplines.blogspot.com/2019/02/algorithms-for-updating-cholesky.html)
 
 I also utilise the following libraries:
 
