@@ -51,7 +51,7 @@ This file provides the code to replicate the empirical results of our study.
 
 ### Prerequisites
 
-- **TwoStepSDFM**: A beta version of my ``R`` package that implements, among other things, the estimation, cross-validation, and nowcasting schemes outlined in our study. [TwoStepSDFM Github Repo](https://eigen.tuxfamily.org/](https://github.com/SiSanchopancho/TwoStepSDFM.git)
+- **TwoStepSDFM**: A beta version of my ``R`` package that implements, among other things, the estimation, cross-validation, and nowcasting schemes outlined in our study. [TwoStepSDFM Github Repo](https://github.com/SiSanchopancho/TwoStepSDFM.git)
 
 ### Usage
 
