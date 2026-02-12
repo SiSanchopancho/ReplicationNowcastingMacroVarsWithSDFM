@@ -63,7 +63,7 @@ Using the script is straightforward. The first time you run it, uncomment and ex
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
-© 2024 Domenic Franjic
+© 2024-2026 Domenic Franjic
 
 This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
 
