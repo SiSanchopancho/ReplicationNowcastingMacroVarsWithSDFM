@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later #
 #
-# Copyright (C) 2026 Domenic Franjic
+# Copyright (C) 2024-2026 Domenic Franjic
 #
 # This file is part of ReplicationNowcastingMacroVarsWithSDFM.
 #
@@ -500,4 +500,5 @@ nowcast_plot_post_covid <- nowcast_plots +
   ) +
   theme(legend.position = "none")
 nowcast_plot_post_covid
+
 
