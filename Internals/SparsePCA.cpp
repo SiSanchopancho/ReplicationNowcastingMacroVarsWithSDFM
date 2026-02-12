@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 /*
- * Copyright © 2026 Domenic Franjic
+ * Copyright Â© 2024-2026 Domenic Franjic
  *
  * This file is part of ReplicationNowcastingMacroVarsWithSDFM.
  *
@@ -23,7 +23,7 @@
 /* Sparse Principal Components Analysis */
 /* Source:
 - Zou, H., Hastie, T., & Tibshirani, R. (2006). Sparse principal component analysis. Journal of computational and graphical statistics, 15(2), 265-286. (https://doi.org/10.1198/106186006X113430)
-- Zou, H., Hastie, T., & Zou, M. H. (2016). Package ‘elasticnet’. (https://cran.r-project.org/web/packages/elasticnet/index.html)
+- Zou, H., Hastie, T., & Zou, M. H. (2016). Package â€˜elasticnetâ€™. (https://cran.r-project.org/web/packages/elasticnet/index.html)
 */
 void SparsePCA::SparsePC(
     SPC_fit& results, // Object for saving the results
