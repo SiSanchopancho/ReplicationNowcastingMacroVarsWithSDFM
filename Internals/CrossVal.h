@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 /*
- * Copyright © 2026 Domenic Franjic
+ * Copyright Â© 2024-2026 Domenic Franjic
  *
  * This file is part of ReplicationNowcastingMacroVarsWithSDFM.
  *
@@ -212,4 +212,5 @@ namespace CrossVal {
 
 };
 #endif /* defined(CV) */
+
 
