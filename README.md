@@ -5,7 +5,7 @@ A revised version of the code used for the simulation study in "Nowcasting Macro
 
 This repository contains the replication code for the following working paper:
 
-Franjic, Domenic and Schweikert, Karsten, *Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model* (February, 2026). Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872
+Franjic, Domenic and Schweikert, Karsten, Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model (October 30, 2024), Last revised: 12 Feb 2026. Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872 
 
 ## SimulationStudyReplication.cpp
 
@@ -47,7 +47,7 @@ Most of the model parameters are set at compile time. However, it is possible to
 
 ## EmpiricalStudyReplication.r
 
-This file provides the code to replicate the empirical results of our study (comming soon).
+This file provides the code to replicate the empirical results of our study.
 
 ### Prerequisites
 
@@ -55,7 +55,9 @@ This file provides the code to replicate the empirical results of our study (com
 
 ### Usage
 
-Using the code is straightforward. Before using it for the first time, the data download block should be un-commented and executed in order to, load, pre-process and restructure the data vintages. After that, the script can be executed without modification.
+Before using the code, you must download all available FRED-MD vintages from the  [FRED webiste](https://www.stlouisfed.org/research/economists/mccracken/fred-databases) (McCracken, M. W. 2024. “FRED-MD and FRED-QD: Monthly and Quarterly Databases for Macroeconomic Research.” Federal Reserve Bank of St. Louis). You also need a single FRED-QD file to extract the transformation code corresponding to the US GDP level series. We recommend using the ``fred-qd_2024m12.csv`` dataset, since it is already referenced in the code. 
+
+Using the script is straightforward. The first time you run it, uncomment and execute the data‐download block to load, preprocess, and restructure the mixed frequency vintage files. After that step completes, you can execute the script without further modification.
 
 ## License
 
