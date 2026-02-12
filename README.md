@@ -5,7 +5,7 @@ A revised version of the code used for the simulation study in "Nowcasting Macro
 
 This repository contains the replication code for the following working paper:
 
-Franjic, Domenic and Schweikert, Karsten, Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model (October 30, 2024), Last revised: 12 Feb 2026. Available at SSRN: https://ssrn.com/abstract=4733872 or http://dx.doi.org/10.2139/ssrn.4733872 
+Franjic, Domenic and Schweikert, Karsten, Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model (October 30, 2024), Last revised: 12 Feb 2026. Available at SSRN: [https://ssrn.com/abstract=4733872](https://ssrn.com/abstract=4733872) or [https://ssrn.com/abstract=4733872](http://dx.doi.org/10.2139/ssrn.4733872) 
 
 ## SimulationStudyReplication.cpp
 
