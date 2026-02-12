@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 /*
- * Copyright © 2026 Domenic Franjic
+ * Copyright Â© 2024-2026 Domenic Franjic
  *
  * This file is part of ReplicationNowcastingMacroVarsWithSDFM.
  *
@@ -387,4 +387,5 @@ void DataHandle::displayLoadingBar(int progress) {
     const int numChars = sizeof(chars) / sizeof(chars[0]);
 
     std::cout << "\rProgress: " << chars[progress % numChars] << " " << std::flush;
+
 }
