@@ -22,6 +22,7 @@
 
 /* Draw random correlation matrices 
 * Source: https://stats.stackexchange.com/questions/2746/how-to-efficiently-generate-random-positive-semidefinite-correlation-matrices
+* Lewandowski, D., Kurowicka, D., & Joe, H. (2009). Generating random correlation matrices based on vines and extended onion method. Journal of multivariate analysis, 100(9), 1989-2001.
 */
 Eigen::MatrixXd DataGen::rndCorrMat(std::mt19937& gen, const double& beta_param, const int& N)
 {
