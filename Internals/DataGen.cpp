@@ -20,7 +20,9 @@
 
 #include "DataGen.h"
 
-/* Draw random correlation matrices */
+/* Draw random correlation matrices 
+* Source: https://stats.stackexchange.com/questions/2746/how-to-efficiently-generate-random-positive-semidefinite-correlation-matrices
+*/
 Eigen::MatrixXd DataGen::rndCorrMat(std::mt19937& gen, const double& beta_param, const int& N)
 {
     /* Dummies */
