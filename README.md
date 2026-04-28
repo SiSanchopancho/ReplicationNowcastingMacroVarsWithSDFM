@@ -51,7 +51,7 @@ This file provides the code to replicate the empirical results of our study.
 
 ### Prerequisites
 
-- **TwoStepSDFM**: A beta version of my ``R`` package that implements, among other things, the estimation, cross-validation, and nowcasting schemes outlined in our study. [TwoStepSDFM Github Repo](https://github.com/SiSanchopancho/TwoStepSDFM.git)
+- **TwoStepSDFM**: To replicate the results 1:1 version 0.1.5 of my `R` package, which implements, among other things, the estimation, cross-validation, and nowcasting schemes outlined in our study, is required. While this version is no longer available online, it can be provided upon request. Please e-mail me at the address below. For the current version of the package, see the [TwoStepSDFM GitHub repository](https://github.com/SiSanchopancho/TwoStepSDFM.git) or [TwoStepSDFM on CRAN](https://cran.r-project.org/web/packages/TwoStepSDFM/index.html). Please note that using the current version of the package may produce results that differ slightly from those presented in the study. 
 
 ### Usage
 
