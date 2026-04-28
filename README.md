@@ -51,9 +51,7 @@ This file provides the code to replicate the empirical results of our study.
 
 ### Prerequisites
 
-- **TwoStepSDFM**: A beta version of my ``R`` package that implements, among other things, the estimation, cross-validation, and nowcasting schemes outlined in our study. [TwoStepSDFM Github Repo](https://github.com/SiSanchopancho/TwoStepSDFM.git)
-
-### Usage
+- **TwoStepSDFM**: To replicate the results 1:1 version 0.1.5 of my `R` package, which implements, among other things, the estimation, cross-validation, and nowcasting schemes outlined in our study, is required. While this version is no longer available online, it can be provided upon request. Please e-mail me at the address below. For the current version of the package, see the [TwoStepSDFM GitHub repository](https://github.com/SiSanchopancho/TwoStepSDFM.git) or [TwoStepSDFM on CRAN](https://cran.r-project.org/web/packages/TwoStepSDFM/index.html). Please note that using the current version of the package may produce results that differ slightly from those presented in the study.
 
 Before using the code, you must download all available FRED-MD vintages from the  [FRED webiste](https://www.stlouisfed.org/research/economists/mccracken/fred-databases) (McCracken, M. W. 2024. “FRED-MD and FRED-QD: Monthly and Quarterly Databases for Macroeconomic Research.” Federal Reserve Bank of St. Louis). You also need a single FRED-QD file to extract the transformation code corresponding to the US GDP level series. We recommend using the ``fred-qd_2024m12.csv`` dataset, since it is already referenced in the code. 
 
