@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 /*
- * Copyright Â© 2024-2026 Domenic Franjic
+ * Copyright © 2024 Domenic Franjic
  *
  * This file is part of ReplicationNowcastingMacroVarsWithSDFM.
  *
@@ -965,4 +965,3 @@ CrossVal::CV_res CrossVal::parallelRandSinglePenaltyBIC(
 
     return results;
 }
-

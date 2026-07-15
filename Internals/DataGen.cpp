@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 /*
- * Copyright Â© 2024-2026 Domenic Franjic
+ * Copyright © 2024 Domenic Franjic
  *
  * This file is part of ReplicationNowcastingMacroVarsWithSDFM.
  *
@@ -20,10 +20,7 @@
 
 #include "DataGen.h"
 
-/* Draw random correlation matrices 
-* Source: https://stats.stackexchange.com/questions/2746/how-to-efficiently-generate-random-positive-semidefinite-correlation-matrices
-* Lewandowski, D., Kurowicka, D., & Joe, H. (2009). Generating random correlation matrices based on vines and extended onion method. Journal of multivariate analysis, 100(9), 1989-2001.
-*/
+/* Draw random correlation matrices */
 Eigen::MatrixXd DataGen::rndCorrMat(std::mt19937& gen, const double& beta_param, const int& N)
 {
     /* Dummies */
@@ -329,4 +326,3 @@ void DataGen::staticFM(
 
     return;
 }
-

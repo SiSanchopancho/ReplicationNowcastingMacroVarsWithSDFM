@@ -1,22 +1,15 @@
-# Replication of "Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model"
-A revised version of the code used for the simulation study in "Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model" by Dr. [Karsten Schweikert](https://github.com/karstenschweikert) and I.
+# Replication of "Nowcasting Macroeconomic Variables with a Sparse Mixed-Frequency Dynamic Factor Model"
+A revised version of the code used for the simulation study in "Nowcasting Macroeconomic Variables with a Sparse-Mixed Frequency Dynamic Factor Model" by Dr. [Karsten Schweikert](https://github.com/karstenschweikert) and I.
 
 ## Introduction
 
 This repository contains the replication code for the following working paper:
 
-Franjic, Domenic and Schweikert, Karsten, Nowcasting Macroeconomic Variables with a Sparse Mixed Frequency Dynamic Factor Model (October 30, 2024), Last revised: 12 Feb 2026. Available at SSRN: [https://ssrn.com/abstract=4733872](https://ssrn.com/abstract=4733872) or [https://ssrn.com/abstract=4733872](http://dx.doi.org/10.2139/ssrn.4733872) 
+Franjic, Domenic and Schweikert, Karsten, Nowcasting Macroeconomic Variables with a Sparse Mixed-Frequency Dynamic Factor Model (October 30, 2024), Last revised: 13 July 2026. Available at SSRN: [https://ssrn.com/abstract=4733872](https://ssrn.com/abstract=4733872) or [https://ssrn.com/abstract=4733872](http://dx.doi.org/10.2139/ssrn.4733872) 
 
 ## SimulationStudyReplication.cpp
 
 This file, together with the routines in ``./Internals/``, provides the code to replicate the simulation results of our study.
-
-### Features
-
-- **Fast and Parallelised Cross-Validation**: Implements a parallelised random hyper-parameter search for efficient cross-validation.
-- **Flexible Simulation Parameters**: Allows a high degree of customisation of the model parameterisation.
-- **Compatibility**: Works on modern Windows and Linux operating systems.
-- **Open-Source**: Distributed under the GNU General Public License v3.0.
 
 ### Prerequisites
 
@@ -51,7 +44,13 @@ This file provides the code to replicate the empirical results of our study.
 
 ### Prerequisites
 
-- **TwoStepSDFM**: To replicate the results 1:1 version 0.1.5 of my `R` package, which implements, among other things, the estimation, cross-validation, and nowcasting schemes outlined in our study, is required. While this version is no longer available online, it can be provided upon request. Please e-mail me at the address below. For the current version of the package, see the [TwoStepSDFM GitHub repository](https://github.com/SiSanchopancho/TwoStepSDFM.git) or [TwoStepSDFM on CRAN](https://cran.r-project.org/web/packages/TwoStepSDFM/index.html). Please note that using the current version of the package may produce results that differ slightly from those presented in the study. 
+- **TwoStepSDFM**: To replicate the results, version 0.3.0.3 of my `R` package, which implements, among other things, the estimation, cross-validation, and nowcasting schemes outlined in our study, is required. As of now, this version of the package is not available on CRAN. A .tar.gz-ball of version 0.3.0.3 is found in this repo. For the most recent version of the package, see the [TwoStepSDFM GitHub repository](https://github.com/SiSanchopancho/TwoStepSDFM.git). For the most stable version of the package see [TwoStepSDFM on CRAN](https://cran.r-project.org/web/packages/TwoStepSDFM/index.html). Please note that using the current version of the package may produce results that differ slightly from those presented in the study. 
+
+The following R-version has been used to retrieve the results of the study:
+
+R version 4.3.1 (2023-06-16 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 11 x64 (build 26200)
 
 ### Usage
 

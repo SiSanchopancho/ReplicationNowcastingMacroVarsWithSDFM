@@ -1,7 +1,5 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 /*
- * Copyright © 2024-2026 Domenic Franjic
- *
  * This file is part of ReplicationNowcastingMacroVarsWithSDFM.
  *
  * ReplicationNowcastingMacroVarsWithSDFM is free software: you can redistribute
