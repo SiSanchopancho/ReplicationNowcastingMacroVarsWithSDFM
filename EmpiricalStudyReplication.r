@@ -786,3 +786,112 @@ makeTexTable <- function(){
   \\end{table}")
 }
 makeTexTable()
+
+# OSH evaluation #
+
+# Create result tables #
+
+# Create a relative and absolute MSNE results
+oshCreateResultForMonth <- function(month_ind){
+  msne_all_models <- (one_step$Realisation - one_step[, 1:5])[month_ind]^2
+  results <- as.data.frame(matrix(NaN, 7, 5))
+  colnames(results) <- colnames(one_step)[1:5]
+  rownames(results) <- c("Full Sample w/o Covid", "Pre-Covid", "Covid", "Post-Covid", 
+                         "Dotcom Crisis", "Financial Crisis", "No Crisis")
+  results[1, ] <- colMeans(msne_all_models[!corona_ind[month_ind], ], na.rm = TRUE)
+  results[2, ] <- colMeans(msne_all_models[pre_corona_ind[month_ind], ], na.rm = TRUE)
+  results[3, ] <- colMeans(msne_all_models[corona_ind[month_ind], ], na.rm = TRUE)
+  results[4, ] <- colMeans(msne_all_models[post_corona_ind[month_ind], ], na.rm = TRUE)
+  results[5, ] <- colMeans(msne_all_models[dot_com_ind[month_ind], ], na.rm = TRUE)
+  results[6, ] <- colMeans(msne_all_models[financial_ind[month_ind], ], na.rm = TRUE)
+  results[7, ] <- colMeans(msne_all_models[no_crisis_ind[month_ind], ], na.rm = TRUE)
+  return(results)
+}
+
+osh_results_month_one <- oshCreateResultForMonth(month_one_ind)
+osh_rel_improv_res_month_one <- 100 * round(1 - osh_results_month_one$`SDFM(CV)` / osh_results_month_one, 4)
+osh_results_month_one
+osh_rel_improv_res_month_one
+
+osh_results_month_two <- oshCreateResultForMonth(month_two_ind)
+osh_rel_improv_res_month_two <- 100 * round(1 - osh_results_month_two$`SDFM(CV)` / osh_results_month_two, 4)
+osh_results_month_two
+osh_rel_improv_res_month_two
+
+osh_results_month_three <- oshCreateResultForMonth(month_three_ind)
+osh_rel_improv_res_month_three <- 100 * round(1 - osh_results_month_three$`SDFM(CV)` / osh_results_month_three, 4)
+osh_results_month_three
+osh_rel_improv_res_month_three
+
+osh_rel_imprv_res <- cbind(osh_rel_improv_res_month_one[, c(-1, -2)],
+                           osh_rel_improv_res_month_two[, c(-1, -2)],
+                           osh_rel_improv_res_month_three[, c(-1, -2)])
+osh_rel_imprv_res
+
+# Create absolute results tex table
+osh_full_results_all_month <- rbind(osh_results_month_one,
+                                    osh_results_month_two,
+                                    osh_results_month_three)
+osh_full_results_all_month
+
+oshMakeTable <- function(){
+  cat(
+    "% ", as.character(Sys.time()), "
+\\begin{table}
+\\begin{center}
+\\caption{Mean squared one-step-ahead forecasting error disaggregated by subperiods}\\label{tab::abs_msfe}
+\\resizebox{\\textwidth}{!}{\\begin{tabular}{lccccc}
+  \\hline
+  \\hline
+  Time Period & SDFM (CV) & SDFM (BIC) & DFM & DFM EM & SDFM EM \\\\")
+  cat(
+    "\\hline
+  \\hline
+  \\multicolumn{6}{c}{First Month of Quarter}\\\\
+  \\hline
+  Full Sample w/o Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[1, ]), collapse = " & "), " \\\\\n", 
+    "Pre-Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[2, ]), collapse = " & "), " \\\\\n",
+    "Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[3, ]), collapse = " & "), " \\\\\n",
+    "Post-Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[4, ]), collapse = " & "), " \\\\\n",
+    "Dotcom Crisis & ", paste0(sprintf("%.3f", osh_full_results_all_month[5, ]), collapse = " & "), " \\\\\n",
+    "Financial Crisis & ", paste0(sprintf("%.3f", osh_full_results_all_month[6, ]), collapse = " & "), " \\\\\n",
+    "No-Crisis & ", paste0(sprintf("%.3f", osh_full_results_all_month[7, ]), collapse = " & "), " \\\\\n"
+  )
+  
+  cat(
+    "\\hline
+  \\hline
+  \\multicolumn{6}{c}{Second Month of Quarter}\\\\
+  \\hline
+  Full Sample w/o Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[8, ]), collapse = " & "), " \\\\\n", 
+    "Pre-Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[9, ]), collapse = " & "), " \\\\\n",
+    "Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[10, ]), collapse = " & "), " \\\\\n",
+    "Post-Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[11, ]), collapse = " & "), " \\\\\n",
+    "Dotcom Crisis & ", paste0(sprintf("%.3f", osh_full_results_all_month[12, ]), collapse = " & "), " \\\\\n",
+    "Financial Crisis & ", paste0(sprintf("%.3f", osh_full_results_all_month[13, ]), collapse = " & "), " \\\\\n",
+    "No-Crisis & ", paste0(sprintf("%.3f", osh_full_results_all_month[14, ]), collapse = " & "), " \\\\\n"
+  )
+  
+  cat(
+    "\\hline
+  \\hline
+  \\multicolumn{6}{c}{Last Month of Quarter}\\\\
+  \\hline
+  Full Sample w/o Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[15, ]), collapse = " & "), " \\\\\n", 
+    "Pre-Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[16, ]), collapse = " & "), " \\\\\n",
+    "Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[17, ]), collapse = " & "), " \\\\\n",
+    "Post-Covid & ", paste0(sprintf("%.3f", osh_full_results_all_month[18, ]), collapse = " & "), " \\\\\n",
+    "Dotcom Crisis & ", paste0(sprintf("%.3f", osh_full_results_all_month[19, ]), collapse = " & "), " \\\\\n",
+    "Financial Crisis & ", paste0(sprintf("%.3f", osh_full_results_all_month[20, ]), collapse = " & "), " \\\\\n",
+    "No-Crisis & ", paste0(sprintf("%.3f", osh_full_results_all_month[21, ]), collapse = " & "), " \\\\\n"
+  )
+  cat("\\hline
+  \\hline
+  \\end{tabular}}
+  \\end{center}
+  \\begin{tablenotes}\\scriptsize\\item  The crisis periods are constructed according to \\citet{hamilton2026usrecessions} as: 2020Q1 to 2021Q1 for ``Covid'', 2001Q1 to 2001Q4 for ``Dotcom Crisis'', 2007Q4 to 2009Q2 for ``Financial Crisis''. ``Full Sample w/o Covid'' refers to the entire out-of-sample period from 1999Q3 to 2025Q3 excluding the covid period from 2020Q1 to 2021Q1. ``Pre-Covid'' refers to the period of 1999Q3 to 2019Q4. ``Post-Covid'' refers to the period from 2021Q2 to 2025Q3. All periods outside of the periods of ``Covid'', ``Post-Covid'', ``Dotcom Crisis'', and ``Financial Crisis'' are referred to as ``No Crisis''.
+  \\item ``SDFM (CV)'' denotes the two-step estimator for SDFMs proposed in this study with hyper parameters selected via cross-validation. ``SDFM (BIC)'' denotes the two-step estimator for SDFMs proposed in this study with hyper parameters selected via the BIC. ``DFM'' denotes the two-step estimator for DFMs by \\citet{Giannone2008Nowcasting}. ``DFM EM'' denotes the expectation-maximisation estimator for DFMs by \\citet{banbura2014maximum}. ``SDFM EM'' denotes the expectation-maximisation estimator for SDFMs by \\citet{mosley2023sparse} with hyper-parameters validated via the BIC.
+  \\end{tablenotes} 
+  \\end{table}")
+}
+oshMakeTable()
