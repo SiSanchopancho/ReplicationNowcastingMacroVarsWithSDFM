@@ -184,4 +184,4 @@ The project uses the following libraries:
 - **Department:** Econometrics and Statistics, Core Facility Hohenheim
 - **E-mail:** franjic@uni-hohenheim.de
 - **Reproducibility package assembled:** 14 September 2026
-```
+
