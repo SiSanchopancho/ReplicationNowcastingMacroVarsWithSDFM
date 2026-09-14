@@ -18,8 +18,6 @@
 # along with ReplicationNowcastingMacroVarsWithSDFM. If not, see <https://www.gnu.org/licenses/>.
 #
 
-# Empirical application #
-
 library(rstudioapi)
 library(zoo)
 library(lubridate)
@@ -213,7 +211,7 @@ for(vintage_name in vintage_file_list[seq(vintage_ind, length(vintage_file_list)
   if(end_of_qtr_ind && !covid_time){
     # if(end_of_qtr_ind){
     # Estimate the number of factors:
-    # We choose a range between 1 and 7 factor for a reasonable interval and a good
+    # We choose a range between 2 and 8 factor for a reasonable interval and a good
     #   testing power. The confidence level for rejecting the null is based on the
     #   original paper of Onatski (2009)
     min_no_of_factors <- 2
@@ -304,7 +302,7 @@ for(vintage_name in vintage_file_list[seq(vintage_ind, length(vintage_file_list)
   nowcasts$`DFM EM`[vintage_ind] <- centering[variables_of_interest] + pred$`Avg. Point Forecast`[1] * scaling[variables_of_interest]
   one_step$`DFM EM`[vintage_ind] <- centering[variables_of_interest] + pred$`Avg. Point Forecast`[2] * scaling[variables_of_interest]
 
-  # Dense EM nowcasting
+  # Sparse EM nowcasting
   sparse_em_fit <- sparseDFM::sparseDFM(data_zoo[, which(frequency == 12)], no_of_factors_test,
                                         standardize = FALSE, alg = "EM-sparse")
   factor_delay <- rep((3 - month(index(data_zoo)[nrow(data_zoo)]) %% 3) %% 3, no_of_factors_test)
